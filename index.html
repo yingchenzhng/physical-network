@@ -1,13 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>The Title Of Your Page</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-  </head>  
-  <body>
-    <!-- Your content will go here -->
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <title>Physical Network Trace: Collage</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+        .globe-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: transparent;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .globe-button:hover {
+            background-color: transparent;
+        }
+
+        .typewriter {
+            display: inline-block;
+            overflow: hidden;
+            vertical-align: bottom;
+            color: white; 
+            position: relative;
+            z-index: 1; 
+        }
+
+        .typewriter-text {
+            animation: typing 2s steps(32) 1s infinite, blink-caret 0.75s step-end infinite;
+            white-space: nowrap;
+            font-size: 50px; 
+            font-weight: bold; 
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink-caret {
+            from,
+            to {
+                border-right: 2px solid transparent;
+            }
+            50% {
+                border-right: 2px solid black; 
+            }
+        }
+        .globe_image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="globe-container">
+        <a href="http://127.0.0.1:5500/index1.html" alt="Track Routes" title="Track" class="globe-button">
+            <img src="images/globe2.gif" class="globe_image">
+            <div class="typewriter">
+                <span class="typewriter-text">Click to navigate...</span>
+            </div>
+        </a>
+    </div>
+</body>
 </html>
+
+
+

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Physical Network Trace: Collage</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; 
+            background-image: url('images/wall.gif'); 
+            background-size: cover;
+        }
+
+        .content {
+            text-align: center;
+        }
+
+        .collage {
+            background-color: #3498db;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+
+        #destination-description {
+            margin-top: 20px;
+        }
+
+        .destination-image {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="collage-container">
+        <div class="collage">
+            <h1>Physical Network Trace: Collage</h1>
+            <p>Choose your destination:</p>
+            <button onclick="showDescription('San Francisco', 'images/san-francisco.jpg')">San Francisco</button>
+            <button onclick="showDescription('New York', 'images/new-york.jpg')">New York</button>
+            <button onclick="showDescription('Texas', 'images/texas.jpg')">Texas</button>
+            <button onclick="showDescription('Illinois', 'images/illinois.jpg')">Illinois</button>
+        </div>
+        <div id="destination-description">
+            <p>Click a destination to see more details</p>
+        </div>
+    </div>
+
+    <script>
+        function showDescription(destination, imagePath) {
+            const descriptionDiv = document.getElementById('destination-description');
+            let description = "<p>Click a destination to see more details.</p>";
+            let image = "";
+
+            switch (destination) {
+                case 'San Francisco':
+                    description = "<h2>San Francisco</h2><p><ul>IP Address: 151.101.129.197</ul>The city’s infamous fog actually has its own name. While its origin is unclear, locals have been known to refer to the fog as Karl, who even has an Instagram account.</p>";
+                    image = `<img src="images/SF.jpg" class="destination-image" alt="SF_image">`;
+                    break;
+                case 'New York':
+                    description = "<h2>New York</h2><p><ul>IP Address: 69.203.112.1</ul>The ice cream cone, pasta primavera, and eggs Benedict were all invented in New York.</p>";
+                    image = `<img src="images/NYC.jpg" class="destination-image" alt="NYC_image">`;
+                    break;
+                case 'Texas':
+                    description = "<h2>Texas</h2><p><ul>IP Address: 66.109.10.179</ul>Texas is a large and diverse state in the southern United States known for its barbecue, cowboys, and oil industry.</p>";
+                    image = `<img src="images/TS.jpg" class="destination-image" alt="TS_image">`;
+                    break;
+                case 'Illinois':
+                    description = "<h2>Illinois</h2><p><ul>IP Address: 66.109.9.171</ul>Illinois is a state in the Midwest known for Chicago, its architecture, deep-dish pizza, and jazz music.</p>";
+                    image = `<img src="images/IL.jpg" class="destination-image" alt="IL_image">`;
+                    break;
+            }
+
+            descriptionDiv.innerHTML = image + description; 
+        }
+    </script>
+</body>
+</html>
+

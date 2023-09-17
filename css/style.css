@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.globe {
+    text-align: center;
+    margin-top: 150px;
+    }
+    .globe_image {
+    height: 70vh;
+    }
+
+.collage-container {
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    position:absolute
+}
+.collage {
+    background-color: #3498db;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
